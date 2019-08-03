@@ -92,6 +92,9 @@ class IntroViewsFlutter extends StatefulWidget {
   /// default to 300.0
   final double fullTransition;
 
+  /// Enables or Disables the visibility of the page indicators
+  final bool showIndicators;
+
   final Color background;
 
   IntroViewsFlutter(
@@ -116,6 +119,7 @@ class IntroViewsFlutter extends StatefulWidget {
     this.columnMainAxisAlignment = MainAxisAlignment.spaceAround,
     this.fullTransition = FULL_TARNSITION_PX,
     this.background,
+    this.showIndicators = true
   }) : super(key: key);
 
   @override
@@ -251,6 +255,7 @@ class _IntroViewsFlutterState extends State<IntroViewsFlutter>
                 columnMainAxisAlignment: widget.columnMainAxisAlignment),
           ), //PageReveal
 
+          if (widget.showIndicators)
           PagerIndicator(
             //bottom page indicator
             viewModel: PagerIndicatorViewModel(
