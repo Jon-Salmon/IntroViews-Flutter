@@ -36,7 +36,9 @@ IntroViews is inspired by [Paper Onboarding](https://github.com/Ramotion/paper-o
   * [Documentation](#documentaion)  
   	* [PageViewModel Class](#pageViewModel-class)
   	* [IntroViewFlutter Class](#introViewFlutter-class)
-  * [Bugs or Requests](#want-to-contribute-!)
+  * [Bugs or Requests](#bugs-or-requests)
+  * [Donate](#donate)
+  * [Contributors](#contributors)
   * [License](#license)
 
 <img src="https://github.com/aagarwal1012/IntroViews-Flutter/blob/master/display/output.gif?raw=true" align = "right" height = "550px">
@@ -63,7 +65,7 @@ You should ensure that you add the `intro_views_flutter` as a dependency in your
 
 ```yaml
 dependencies:
-  intro_views_flutter: '^2.6.0'
+  intro_views_flutter: '^2.8.0'
 ```
 
 You can also reference the git repository directly if you want:
@@ -98,7 +100,8 @@ You should then run `flutter packages get` in your terminal so as to get the pac
           width: 285.0,
           alignment: Alignment.center,
         ),
-        textStyle: TextStyle(fontFamily: 'MyFont', color: Colors.white),
+        titleTextStyle: TextStyle(fontFamily: 'MyFont', color: Colors.white),
+        bodyTextStyle: TextStyle(fontFamily: 'MyFont', color: Colors.white),
       );
   ```
 
@@ -139,6 +142,8 @@ You should then run `flutter packages get` in your terminal so as to get the pac
 | iconColor             | Color          | Set the page bubble icon color.                                       |                                              Null                                               |
 | bubbleBackgroundColor | Color          | Set the page bubble background color.                                 |                                          Colors.white / Color(0x88FFFFFF)                                           |
 | textStyle             | TextStyle      | Set TextStyle for both title and body                                 | title: `color: Colors.white , fontSize: 50.0` <br> body: `color: Colors.white , fontSize: 24.0` |
+| titleTextStyle             | TextStyle      | Set TextStyle for title                                 | `color: Colors.white , fontSize: 50.0` |
+| bodyTextStyle             | TextStyle      | Set TextStyle for body                                 | `color: Colors.white , fontSize: 24.0` |
 | bubble                | Widget         | Set a custom widget for the inner bubble                              |                                              null                                               |
 
 ### IntroViewFlutter Class
@@ -167,15 +172,41 @@ You should then run `flutter packages get` in your terminal so as to get the pac
 
 For help on editing package code, view the [flutter documentation](https://flutter.io/developing-packages/).
 
-# Want to contribute !
+# Bugs or Requests
 
-This is the well `documented` package. I have documented each and every method that I have used, so have a good read to the code and suggest some changes and new feature to be added in the package. See [Contributing.md](https://github.com/aagarwal1012/IntroViews-Flutter/blob/master/CONTRIBUTING.md).
-Feel free to [open an issue](https://github.com/aagarwal1012/IntroViews-Flutter/issues).
+If you encounter any problems feel free to open an [issue](https://github.com/aagarwal1012/IntroViews-Flutter/issues/new?template=bug_report.md). If you feel the library is missing a feature, please raise a [ticket](https://github.com/aagarwal1012/IntroViews-Flutter/issues/new?template=feature_request.md) on GitHub and I'll look into it. Pull request are also welcome.
+
+See [Contributing.md](https://github.com/aagarwal1012/IntroViews-Flutter/blob/master/CONTRIBUTING.md).
 
 # Donate
 > If you found this project helpful or you learned something from the source code and want to thank me, consider buying me a cup of :coffee:
 >
 > - [PayPal](https://www.paypal.me/aagarwal1012/)
+
+# Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/taljacobson"><img src="https://avatars1.githubusercontent.com/u/13042769?v=4" width="100px;" alt="Tal Jacobson"/><br /><sub><b>Tal Jacobson</b></sub></a><br /><a href="#maintenance-taljacobson" title="Maintenance">🚧</a> <a href="https://github.com/aagarwal1012/IntroViews-Flutter/commits?author=taljacobson" title="Documentation">📖</a> <a href="#projectManagement-taljacobson" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://github.com/marloncepeda"><img src="https://avatars0.githubusercontent.com/u/25042632?v=4" width="100px;" alt="marloncepeda"/><br /><sub><b>marloncepeda</b></sub></a><br /><a href="https://github.com/aagarwal1012/IntroViews-Flutter/issues?q=author%3Amarloncepeda" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://medium.com/it-challenge"><img src="https://avatars0.githubusercontent.com/u/963316?v=4" width="100px;" alt="Kravchenko Igor"/><br /><sub><b>Kravchenko Igor</b></sub></a><br /><a href="https://github.com/aagarwal1012/IntroViews-Flutter/issues?q=author%3AGorniv" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/SiDevesh"><img src="https://avatars2.githubusercontent.com/u/17254413?v=4" width="100px;" alt="SiDevesh"/><br /><sub><b>SiDevesh</b></sub></a><br /><a href="#ideas-SiDevesh" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://have-you-been-here.com/"><img src="https://avatars2.githubusercontent.com/u/1579235?v=4" width="100px;" alt="Slawa Pidgorny"/><br /><sub><b>Slawa Pidgorny</b></sub></a><br /><a href="#ideas-spidgorny" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://haideraltahan.com"><img src="https://avatars1.githubusercontent.com/u/4427929?v=4" width="100px;" alt="Haider Al-Tahan"/><br /><sub><b>Haider Al-Tahan</b></sub></a><br /><a href="#ideas-haideraltahan" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://newerton.com"><img src="https://avatars3.githubusercontent.com/u/4175945?v=4" width="100px;" alt="Newerton"/><br /><sub><b>Newerton</b></sub></a><br /><a href="https://github.com/aagarwal1012/IntroViews-Flutter/issues?q=author%3Anewerton" title="Bug reports">🐛</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://www.discoos.org"><img src="https://avatars3.githubusercontent.com/u/866528?v=4" width="100px;" alt="Kenneth Gulbrandsøy"/><br /><sub><b>Kenneth Gulbrandsøy</b></sub></a><br /><a href="https://github.com/aagarwal1012/IntroViews-Flutter/issues?q=author%3Akengu" title="Bug reports">🐛</a> <a href="https://github.com/aagarwal1012/IntroViews-Flutter/commits?author=kengu" title="Tests">⚠️</a></td>
+  </tr>
+</table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome! See [Contributing.md](https://github.com/aagarwal1012/IntroViews-Flutter/blob/master/CONTRIBUTING.md).
 
 # License
 

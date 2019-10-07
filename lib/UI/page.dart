@@ -44,8 +44,7 @@ class Page extends StatelessWidget {
       mainAxisAlignment: columnMainAxisAlignment,
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
-        Flexible(
-          flex: 1,
+        SafeArea(
           child: new _TitlePageTransform(
             percentVisible: percentVisible,
             pageViewModel: pageViewModel,
@@ -87,13 +86,21 @@ class Page extends StatelessWidget {
             mainAxisAlignment: columnMainAxisAlignment,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-              new _TitlePageTransform(
-                percentVisible: percentVisible,
-                pageViewModel: pageViewModel,
+              Expanded(
+                flex: 2,
+                child: SafeArea(
+                  child: new _TitlePageTransform(
+                    percentVisible: percentVisible,
+                    pageViewModel: pageViewModel,
+                  ),
+                ),
               ), //Transform
-              new _BodyPageTransform(
-                percentVisible: percentVisible,
-                pageViewModel: pageViewModel,
+              Expanded(
+                flex: 4,
+                child: new _BodyPageTransform(
+                  percentVisible: percentVisible,
+                  pageViewModel: pageViewModel,
+                ),
               ), //Transform
             ],
           ), // Column
@@ -128,7 +135,7 @@ class _BodyPageTransform extends StatelessWidget {
           right: 10.0,
         ),
         child: DefaultTextStyle.merge(
-          style: pageViewModel.bodyTextStyle,
+          style: pageViewModel.mergedBodyTextStyle,
           textAlign: TextAlign.center,
           child: pageViewModel.body,
         ),
@@ -189,12 +196,12 @@ class _TitlePageTransform extends StatelessWidget {
       child: new Padding(
         padding: new EdgeInsets.only(
           top: 5.0,
-          // bottom: 30.0,
+          bottom: 5.0,
           left: 10.0,
           right: 10.0,
         ),
         child: DefaultTextStyle.merge(
-          style: pageViewModel.titleTextStyle,
+          style: pageViewModel.mergedTitleTextStyle,
           child: pageViewModel.title,
         ),
       ), //Padding
